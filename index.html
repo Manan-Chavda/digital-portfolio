@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manan Chavda — Academic Portfolio</title>
+  <meta name="description" content="Academic & professional portfolio — projects, CV, research, skills and contact.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark indigo */
+      --card:#0b1220;
+      --muted:#9aa6bf;
+      --accent:#7c3aed; /* violet */
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#071026);}
+    a{color:inherit}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+
+    /* Header / Hero */
+    header.site-hero{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}
+    .avatar-wrap{width:200px;height:200px;background:var(--glass);border-radius:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 30px rgba(2,6,23,0.6);position:relative;overflow:hidden}
+    /* Animated SVG avatar */
+    .avatar-svg{width:160px;height:160px;transform-origin:center;animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}100%{transform:translateY(0) rotate(-2deg)}}
+
+    .hero-content h1{margin:0;font-size:28px;font-weight:800}
+    .hero-content p.tagline{color:var(--muted);margin:8px 0 16px}
+    .meta{display:flex;gap:12px;flex-wrap:wrap}
+    .pill{background:var(--glass-2);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
+
+    /* Nav / TOC */
+    nav.toc{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    nav.toc a{padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);text-decoration:none;color:var(--muted);font-weight:600}
+
+    /* Sections */
+    section.card{background:linear-gradient(180deg,var(--card),rgba(10,14,20,0.9));border-radius:16px;padding:20px;margin-top:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02),0 6px 24px rgba(2,6,23,0.6)}
+    h2{margin:0 0 12px;font-size:18px}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .grid-projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+
+    .project{background:var(--glass);padding:12px;border-radius:12px}
+    .project img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+    .project h4{margin:8px 0 6px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Resume */
+    .resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .skill-pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass-2);margin:6px 6px 6px 0;font-weight:600}
+
+    /* Testimonials */
+    blockquote{margin:0;padding:12px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(124,58,237,0.04),transparent);border-radius:8px}
+
+    /* Footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:880px){header.site-hero{grid-template-columns:1fr;grid-template-rows:auto auto}.two-col{grid-template-columns:1fr}.resume-grid{grid-template-columns:1fr}}
+
+    /* small UI bits */
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#4c1d95);color:white;font-weight:700;text-decoration:none}
+    .muted{color:var(--muted)}
+
+    /* Smooth fade-in for sections */
+    .reveal{opacity:0;transform:translateY(8px);animation:reveal 900ms ease forwards}
+    .reveal.delay{animation-delay:120ms}
+    @keyframes reveal{to{opacity:1;transform:none}}
+
+    /* Light mode variant (toggle via .light on body) */
+    body.light{--bg:#f5f7fb;--card:#ffffff;--muted:#5b6b7d;--accent:#0ea5a6;--glass:rgba(2,6,23,0.02);--glass-2:rgba(2,6,23,0.03);color-scheme:light;color:#0b1220}
+  </style>
+</head>
+<body>
+  <div class="container">
+<header class="site-hero">
+<div class="avatar-wrap reveal">
+<!-- Animated SVG avatar (replace colors or SVG if you want) -->
+<img src="WhatsApp Image 2025-08-05 at 22.35.59_2689f24f.jpg" alt="My Avatar" class="avatar-photo" />
+</div>
+
+      <div class="hero-content reveal delay">
+        <h1>Manan Chavda</h1>
+        <p class="tagline">Engineer • Learner • Maker — "Designing solutions with curiosity and care"</p>
+        <div class="meta">
+          <span class="pill">B.Tech Computer Science</span>
+          <span class="pill">Pandit Deendayal Energy University </span>
+          <span class="pill">Submitted: 20 November 2025</span>
+        </div>
+
+        <nav class="toc" aria-label="Table of contents">
+          <a href="#introduction">Introduction</a>
+          <a href="#resume">Resume</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#ethics">Ethics</a>
+          <a href="#future">Future</a>
+          <a href="#conclusion">Conclusion</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Introduction -->
+    <section id="introduction" class="card reveal">
+      <h2>Introduction &amp; Learning Philosophy</h2>
+      <p>I am a curious, disciplined learner who believes in building things to learn them. My academic philosophy focuses on rigorous fundamentals, interdisciplinary thinking, and ethical responsibility. I prefer project-based learning and reflective practice to turn knowledge into useful artifacts.</p>
+      <p class="muted">Core values: curiosity • integrity • empathy • craftsmanship</p>
+    </section>
+
+    <!-- Resume / CV -->
+    <section id="resume" class="card reveal delay">
+      <h2>Resume / CV</h2>
+      <div class="two-col">
+        <div>
+          <h3>Education</h3>
+          <p><strong>B.Tech — Computer Science</strong><br>Pandit Deendayal Energy University — 2022–Present<br>GPA: 8.1/10 (example)</p>
+
+          <h3>Work Experience</h3>
+          <p><strong>Software Intern</strong> — SilverTouch Technologies(Jun 2024–Aug 2024)<br>
+            Built a full-stack prototype for data visualization and processed ETL pipelines; collaborated in a 4-person agile team.</p>
+
+          <h3>Skills</h3>
+          <div>
+            <span class="skill-pill">HTML &amp; CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">Git</span>
+          </div>
+
+          <h3>Certifications</h3>
+          <p class="muted">Placeholder: add certificate images or links</p>
+
+          <h3>Hobbies</h3>
+          <p class="muted">Open-source, playing guitar, photography</p>
+        </div>
+
+        <aside>
+          <h3>Contact</h3>
+          <p class="muted">Email: <a href="mailto:manan.k.chavda2005@gmail.com">manan.k.chavda2005@gmail.com</a><br>Location: Ahmedabad, India</p>
+          <p><a class="btn" href="/resume.pdf" download>Download Resume</a></p>
+
+          <h3>Quick links</h3>
+          <p class="muted">
+            <a href="#projects">Projects</a> • <a href="#testimonials">Testimonials</a> • <a href="#contact">Contact</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="card reveal">
+      <h2>Interdisciplinary Projects &amp; Research</h2>
+      <p class="muted">Below are 3 curated projects that combine web, data and systems thinking.</p>
+
+      <div class="grid-projects">
+        <!-- Project 1 -->
+        <article class="project">
+          <img src="https://cdn.dribbble.com/userupload/45630053/file/6592f7feea5c925f0d7a6d7a57d3d9aa.png?format=webp&resize=400x300&vertical=center" alt="Project 1 screenshot">
+          <h4>SmartStudy — Intelligent Study Planner</h4>
+          <p>An adaptive study planner that uses simple ML heuristics to allocate study slots across subjects and measure progress dashboards.</p>
+          <p class="muted">Tech: Python, Flask, SQLite, D3.js</p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project">
+          <img src="https://www.geckoboard.com/uploads/sustainability-dashboard-example.png" alt="Project 2 screenshot">
+          <h4>EcoTrack — Sustainability Dashboard</h4>
+          <p>Web dashboard to visualize household energy usage and suggest optimizations based on time-series analysis and heuristics.</p>
+          <p class="muted">Tech: React, Node.js, MongoDB, Chart.js</p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project">
+          <img src="https://preview.redd.it/hfrc4qs45op71.png?width=640&crop=smart&auto=webp&s=0d6293f2b0b5b73a5d8ef7e411d3a0c410520e56" alt="Project 3 screenshot">
+          <h4>SecureChat — Lightweight Encrypted Messaging Prototype</h4>
+          <p>A demonstration of end-to-end encryption primitives and a minimal client-server chat. Focused on learning cryptography concepts and UX trade-offs.</p>
+          <p class="muted">Tech: C++, WebSockets, OpenSSL (demo)</p>
+        </article>
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="#contact">Request project assets</a>
+        <a class="pill" href="#projects">View all projects</a>
+      </div>
+    </section>
+
+    <!-- Advanced Skills -->
+    <section id="skills" class="card reveal delay">
+      <h2>Advanced Skill Development &amp; Mastery</h2>
+      <p class="muted">Selected advanced skills with artefacts and short notes.</p>
+      <div class="resume-grid">
+        <div>
+          <h4>Full-stack Web Development</h4>
+          <p class="muted">Artifact: <em>SmartStudy</em> — link to repo and a highlighted code snippet</p>
+        </div>
+        <div>
+          <h4>Data Analysis &amp; Visualization</h4>
+          <p class="muted">Artifact: interactive D3 dashboards and sample notebooks.</p>
+        </div>
+
+        <div>
+          <h4>Systems &amp; Security</h4>
+          <p class="muted">Artifact: prototype demonstrating crypto primitives and threat-model writeup.</p>
+        </div>
+        <div>
+          <h4>Leadership &amp; Communication</h4>
+          <p class="muted">Artifact: team lead evaluation and feedback summary.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="card reveal">
+      <h2>Collaborative &amp; Leadership Experiences</h2>
+      <ul>
+        <li><strong>Project Lead — SmartStudy</strong>: Led 4-person team, sprint planning, design reviews; mediated a major scope disagreement by prototyping both approaches and selecting data-driven option.</li>
+        <li><strong>Club President — Coding Club</strong>: Organized workshops, hackathons, and peer-mentoring sessions for 120+ members.</li>
+      </ul>
+    </section>
+
+    <!-- Ethics -->
+    <section id="ethics" class="card reveal delay">
+      <h2>Global Awareness &amp; Ethical Considerations</h2>
+      <p>Case study: Privacy-preserving analytics in EcoTrack — we designed the system to minimize personally-identifiable telemetry; choices included sampling aggregates, client-side anonymization, and clear opt-in consent.</p>
+      <p class="muted">Reflection: Ethical engineering means designing defaults for privacy and thinking through unintended consequences before building.</p>
+    </section>
+
+    <!-- Future -->
+    <section id="future" class="card reveal">
+      <h2>Future Aspirations &amp; Professional Development</h2>
+      <p>Short-term: Secure an internship in full-stack engineering focused on data-driven products. Long-term: Work at the intersection of security and usable systems, publish research and mentor students.</p>
+      <p class="muted">Planned learning: advanced distributed systems, formal methods and secure-by-design patterns.</p>
+    </section>
+
+    <!-- Conclusion & SWOT -->
+    <section id="conclusion" class="card reveal">
+      <h2>Conclusion &amp; Self-Assessment</h2>
+      <p>Key achievements: built cross-disciplinary prototypes, led teams, and learned cryptography basics. Areas for growth: deeper systems knowledge and scalability engineering.</p>
+      <h4>SWOT</h4>
+      <ul>
+        <li><strong>Strengths:</strong> rapid prototyping, multidisciplinary thinking</li>
+        <li><strong>Weaknesses:</strong> limited production-scale ops experience</li>
+        <li><strong>Opportunities:</strong> internships and research collaborations</li>
+        <li><strong>Threats:</strong> rapidly changing tech stack trends</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="card reveal delay">
+      <h2>Testimonials</h2>
+      <blockquote>
+        "Manan is a thoughtful engineer who balances speed with care. Delivered high-quality prototypes and drove the team forward." — Prof. A. Mentor, ABC Institute
+      </blockquote>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card reveal">
+      <h2>Contact</h2>
+      <p class="muted">I'd love to collaborate. Replace the email link and phone below with your real contact details before publishing.</p>
+      <p>Email: <a href="mailto:manan.k.chavda2005@gmail.com">manan.k.chavda2005@gmail.com</a></p>
+
+      <form onsubmit="handleContact(event)" style="margin-top:12px;display:grid;gap:8px;max-width:520px">
+        <input name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+        <input name="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+        <textarea name="message" placeholder="Message" rows="4" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+        <div style="display:flex;gap:8px">
+          <button class="btn" type="submit">Send</button>
+          <button type="button" class="pill" onclick="location.href='mailto:manan@example.com'">Email</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p class="muted">Designed &amp; built by Manan</p>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for TOC
+    document.querySelectorAll('nav.toc a').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();const id=a.getAttribute('href').slice(1);document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+
+    // Contact form handler (placeholder)
+    function handleContact(e){e.preventDefault();const f=new FormData(e.target);alert('Form submission is a demo. Replace with Formspree/Netlify or server endpoint.\n\nName: '+f.get('name'))}
+
+    // small reveal on load
+    document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.animationDelay=(i*80)+'ms'})})
+
+    // Theme toggle on double click of avatar (for demo). Saves preference to localStorage.
+    const avatar=document.querySelector('.avatar-wrap');avatar.addEventListener('dblclick',()=>{
+      document.body.classList.toggle('light');localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark')
+    })
+    if(localStorage.getItem('theme')==='light')document.body.classList.add('light')
+
+    // Placeholder: replace with your real image URLs
+    // All <img> tags currently point to dummyimage.com — replace with your hosted images
+  </script>
+</body>
+</html>
